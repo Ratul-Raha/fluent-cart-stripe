@@ -1,724 +1,1388 @@
-https://api.stripe.com/v1/checkout/sessions/cs_test_a1bDRGJPe3KOmCsgrUM3hCkDeBkBavsw8ohKhrqFEWz7qSDJNyKIOcxKmYstdClass Object
+stdClass Object
 (
-    [id] => cs_test_a1bDRGJPe3KOmCsgrUM3hCkDeBkBavsw8ohKhrqFEWz7qSDJNyKIOcxKmY
-    [object] => checkout.session
-    [after_expiration] => 
-    [allow_promotion_codes] => 
-    [amount_subtotal] => 1000
-    [amount_total] => 1000
-    [automatic_tax] => stdClass Object
+    [id] => evt_1NYoDZLZuf9T2ZCl4zVpILbH
+    [object] => event
+    [api_version] => 2022-11-15
+    [created] => 1690541301
+    [data] => stdClass Object
         (
-            [enabled] => 
-            [status] => 
-        )
-
-    [billing_address_collection] => 
-    [cancel_url] => http://example.com/cancel
-    [client_reference_id] => cab7ce03aa640e068301a10eac37b6c5
-    [consent] => 
-    [consent_collection] => 
-    [created] => 1690264005
-    [currency] => usd
-    [currency_conversion] => 
-    [custom_fields] => Array
-        (
-        )
-
-    [custom_text] => stdClass Object
-        (
-            [shipping_address] => 
-            [submit] => 
-        )
-
-    [customer] => cus_OKIiOumKcQutmg
-    [customer_creation] => if_required
-    [customer_details] => stdClass Object
-        (
-            [address] => stdClass Object
+            [object] => stdClass Object
                 (
-                    [city] => 
-                    [country] => BD
-                    [line1] => 
-                    [line2] => 
-                    [postal_code] => 
-                    [state] => 
-                )
+                    [id] => cs_test_a1idrs7XSyrzVYfyZXjt2QPiAyDnH6qrbmxkSlOXW1q47fApAf6SO6fxd6
+                    [object] => checkout.session
+                    [after_expiration] => 
+                    [allow_promotion_codes] => 
+                    [amount_subtotal] => 3000
+                    [amount_total] => 3000
+                    [automatic_tax] => stdClass Object
+                        (
+                            [enabled] => 
+                            [status] => 
+                        )
 
-            [email] => goutom.authlab@gmail.com
-            [name] => Abc
-            [phone] => 
-            [tax_exempt] => none
-            [tax_ids] => Array
-                (
-                )
-
-        )
-
-    [customer_email] => 
-    [expires_at] => 1690350405
-    [invoice] => in_1NXe6pLZuf9T2ZClDHX9Vsys
-    [invoice_creation] => stdClass Object
-        (
-            [enabled] => 1
-            [invoice_data] => stdClass Object
-                (
-                    [account_tax_ids] => 
-                    [custom_fields] => 
-                    [description] => Invoice for Order #cab7ce03aa640e068301a10eac37b6c5
-                    [footer] => 
-                    [metadata] => stdClass Object
+                    [billing_address_collection] => 
+                    [cancel_url] => http://stripe.com
+                    [client_reference_id] => 4f01ba80ce47d2218f9eb61411002911
+                    [consent] => 
+                    [consent_collection] => 
+                    [created] => 1690541279
+                    [currency] => usd
+                    [currency_conversion] => 
+                    [custom_fields] => Array
                         (
                         )
 
-                    [rendering_options] => 
-                )
-
-        )
-
-    [livemode] => 
-    [locale] => 
-    [metadata] => stdClass Object
-        (
-        )
-
-    [mode] => payment
-    [payment_intent] => pi_3NXe6nLZuf9T2ZCl3AzyNADp
-    [payment_link] => 
-    [payment_method_collection] => always
-    [payment_method_options] => stdClass Object
-        (
-        )
-
-    [payment_method_types] => Array
-        (
-            [0] => card
-        )
-
-    [payment_status] => paid
-    [phone_number_collection] => stdClass Object
-        (
-            [enabled] => 
-        )
-
-    [recovered_from] => 
-    [setup_intent] => 
-    [shipping_address_collection] => 
-    [shipping_cost] => 
-    [shipping_details] => 
-    [shipping_options] => Array
-        (
-        )
-
-    [status] => complete
-    [submit_type] => 
-    [subscription] => 
-    [success_url] => http://wordpress.test/checkout?payment_method=stripe_payment&order_hash=cab7ce03aa640e068301a10eac37b6c5&fct_redirect=yes
-    [total_details] => stdClass Object
-        (
-            [amount_discount] => 0
-            [amount_shipping] => 0
-            [amount_tax] => 0
-        )
-
-    [url] => 
-)
-in_1NXe6pLZuf9T2ZClDHX9VsysstdClass Object
-(
-    [id] => in_1NXe6pLZuf9T2ZClDHX9Vsys
-    [object] => invoice
-    [account_country] => US
-    [account_name] => 
-    [account_tax_ids] => 
-    [amount_due] => 1000
-    [amount_paid] => 1000
-    [amount_remaining] => 0
-    [amount_shipping] => 0
-    [application] => 
-    [application_fee_amount] => 
-    [attempt_count] => 1
-    [attempted] => 1
-    [auto_advance] => 
-    [automatic_tax] => stdClass Object
-        (
-            [enabled] => 
-            [status] => 
-        )
-
-    [billing_reason] => manual
-    [charge] => ch_3NXe6nLZuf9T2ZCl3fyjOasZ
-    [collection_method] => send_invoice
-    [created] => 1690264114
-    [currency] => usd
-    [custom_fields] => 
-    [customer] => cus_OKIiOumKcQutmg
-    [customer_address] => stdClass Object
-        (
-            [city] => 
-            [country] => BD
-            [line1] => 
-            [line2] => 
-            [postal_code] => 
-            [state] => 
-        )
-
-    [customer_email] => goutom.authlab@gmail.com
-    [customer_name] => Abc
-    [customer_phone] => 
-    [customer_shipping] => 
-    [customer_tax_exempt] => none
-    [customer_tax_ids] => Array
-        (
-        )
-
-    [default_payment_method] => 
-    [default_source] => 
-    [default_tax_rates] => Array
-        (
-        )
-
-    [description] => Invoice for Order #cab7ce03aa640e068301a10eac37b6c5
-    [discount] => 
-    [discounts] => Array
-        (
-        )
-
-    [due_date] => 1690264114
-    [effective_at] => 1690264114
-    [ending_balance] => 0
-    [footer] => 
-    [from_invoice] => 
-    [hosted_invoice_url] => https://invoice.stripe.com/i/acct_1NVUhqLZuf9T2ZCl/test_YWNjdF8xTlZVaHFMWnVmOVQyWkNsLF9PS0lpdnlNTUJTNEdWeWh0N2tTTVRVN2NIblRodU01LDgwODA0OTE30200B81wQiwr?s=ap
-    [invoice_pdf] => https://pay.stripe.com/invoice/acct_1NVUhqLZuf9T2ZCl/test_YWNjdF8xTlZVaHFMWnVmOVQyWkNsLF9PS0lpdnlNTUJTNEdWeWh0N2tTTVRVN2NIblRodU01LDgwODA0OTE30200B81wQiwr/pdf?s=ap
-    [last_finalization_error] => 
-    [latest_revision] => 
-    [lines] => stdClass Object
-        (
-            [object] => list
-            [data] => Array
-                (
-                    [0] => stdClass Object
+                    [custom_text] => stdClass Object
                         (
-                            [id] => il_1NXe6pLZuf9T2ZClyxJevIFS
-                            [object] => line_item
-                            [amount] => 1000
-                            [amount_excluding_tax] => 1000
-                            [currency] => usd
-                            [description] => Shirt
-                            [discount_amounts] => Array
+                            [shipping_address] => 
+                            [submit] => 
+                        )
+
+                    [customer] => cus_OLVDPIjJg6zgfB
+                    [customer_creation] => if_required
+                    [customer_details] => stdClass Object
+                        (
+                            [address] => stdClass Object
+                                (
+                                    [city] => 
+                                    [country] => BD
+                                    [line1] => 
+                                    [line2] => 
+                                    [postal_code] => 
+                                    [state] => 
+                                )
+
+                            [email] => goutom.authlab@gmail.com
+                            [name] => Abc
+                            [phone] => 
+                            [tax_exempt] => none
+                            [tax_ids] => Array
                                 (
                                 )
 
-                            [discountable] => 1
-                            [discounts] => Array
-                                (
-                                )
+                        )
 
-                            [invoice_item] => ii_1NXe6pLZuf9T2ZCl6trzMBgj
-                            [livemode] => 
-                            [metadata] => stdClass Object
+                    [customer_email] => 
+                    [expires_at] => 1690627679
+                    [invoice] => in_1NYoDZLZuf9T2ZClhl7i2acu
+                    [invoice_creation] => stdClass Object
+                        (
+                            [enabled] => 1
+                            [invoice_data] => stdClass Object
                                 (
-                                )
-
-                            [period] => stdClass Object
-                                (
-                                    [end] => 1690264115
-                                    [start] => 1690264115
-                                )
-
-                            [plan] => 
-                            [price] => stdClass Object
-                                (
-                                    [id] => price_1NXe53LZuf9T2ZClztYTh28M
-                                    [object] => price
-                                    [active] => 
-                                    [billing_scheme] => per_unit
-                                    [created] => 1690264005
-                                    [currency] => usd
-                                    [custom_unit_amount] => 
-                                    [livemode] => 
-                                    [lookup_key] => 
+                                    [account_tax_ids] => 
+                                    [custom_fields] => 
+                                    [description] => Invoice for Order #4f01ba80ce47d2218f9eb61411002911
+                                    [footer] => 
                                     [metadata] => stdClass Object
                                         (
                                         )
 
-                                    [nickname] => 
-                                    [product] => prod_OInSY62NMAgQjZ
-                                    [recurring] => 
-                                    [tax_behavior] => unspecified
-                                    [tiers_mode] => 
-                                    [transform_quantity] => 
-                                    [type] => one_time
-                                    [unit_amount] => 1000
-                                    [unit_amount_decimal] => 1000
+                                    [rendering_options] => 
                                 )
 
-                            [proration] => 
-                            [proration_details] => stdClass Object
-                                (
-                                    [credited_items] => 
-                                )
-
-                            [quantity] => 1
-                            [subscription] => 
-                            [tax_amounts] => Array
-                                (
-                                )
-
-                            [tax_rates] => Array
-                                (
-                                )
-
-                            [type] => invoiceitem
-                            [unit_amount_excluding_tax] => 1000
                         )
 
-                )
-
-            [has_more] => 
-            [total_count] => 1
-            [url] => /v1/invoices/in_1NXe6pLZuf9T2ZClDHX9Vsys/lines
-        )
-
-    [livemode] => 
-    [metadata] => stdClass Object
-        (
-        )
-
-    [next_payment_attempt] => 
-    [number] => C4CABD04-0001
-    [on_behalf_of] => 
-    [paid] => 1
-    [paid_out_of_band] => 
-    [payment_intent] => pi_3NXe6nLZuf9T2ZCl3AzyNADp
-    [payment_settings] => stdClass Object
-        (
-            [default_mandate] => 
-            [payment_method_options] => 
-            [payment_method_types] => 
-        )
-
-    [period_end] => 1690264114
-    [period_start] => 1690264114
-    [post_payment_credit_notes_amount] => 0
-    [pre_payment_credit_notes_amount] => 0
-    [quote] => 
-    [receipt_number] => 
-    [rendering_options] => 
-    [shipping_cost] => 
-    [shipping_details] => 
-    [starting_balance] => 0
-    [statement_descriptor] => 
-    [status] => paid
-    [status_transitions] => stdClass Object
-        (
-            [finalized_at] => 1690264114
-            [marked_uncollectible_at] => 
-            [paid_at] => 1690264114
-            [voided_at] => 
-        )
-
-    [subscription] => 
-    [subtotal] => 1000
-    [subtotal_excluding_tax] => 1000
-    [tax] => 
-    [test_clock] => 
-    [total] => 1000
-    [total_discount_amounts] => Array
-        (
-        )
-
-    [total_excluding_tax] => 1000
-    [total_tax_amounts] => Array
-        (
-        )
-
-    [transfer_data] => 
-    [webhooks_delivered_at] => 1690264114
-)
-https://api.stripe.com/v1/checkout/sessions/cs_test_a1NCJcCkWqY49ic0i1l8PsOvQ4Bvvy8x95ShF5wW9kHGUb7LQq8NUUcn0BstdClass Object
-(
-    [id] => cs_test_a1NCJcCkWqY49ic0i1l8PsOvQ4Bvvy8x95ShF5wW9kHGUb7LQq8NUUcn0B
-    [object] => checkout.session
-    [after_expiration] => 
-    [allow_promotion_codes] => 
-    [amount_subtotal] => 1000
-    [amount_total] => 1000
-    [automatic_tax] => stdClass Object
-        (
-            [enabled] => 
-            [status] => 
-        )
-
-    [billing_address_collection] => auto
-    [cancel_url] => https://stripe.com
-    [client_reference_id] => 
-    [consent] => 
-    [consent_collection] => stdClass Object
-        (
-            [promotions] => none
-            [terms_of_service] => none
-        )
-
-    [created] => 1690260990
-    [currency] => usd
-    [currency_conversion] => 
-    [custom_fields] => Array
-        (
-        )
-
-    [custom_text] => stdClass Object
-        (
-            [shipping_address] => 
-            [submit] => 
-        )
-
-    [customer] => 
-    [customer_creation] => if_required
-    [customer_details] => stdClass Object
-        (
-            [address] => stdClass Object
-                (
-                    [city] => 
-                    [country] => BD
-                    [line1] => 
-                    [line2] => 
-                    [postal_code] => 
-                    [state] => 
-                )
-
-            [email] => goutom.authlab@gmail.com
-            [name] => Abc
-            [phone] => 
-            [tax_exempt] => none
-            [tax_ids] => Array
-                (
-                )
-
-        )
-
-    [customer_email] => 
-    [expires_at] => 1690347389
-    [invoice] => 
-    [invoice_creation] => stdClass Object
-        (
-            [enabled] => 
-            [invoice_data] => stdClass Object
-                (
-                    [account_tax_ids] => 
-                    [custom_fields] => 
-                    [description] => 
-                    [footer] => 
+                    [livemode] => 
+                    [locale] => 
                     [metadata] => stdClass Object
                         (
                         )
 
-                    [rendering_options] => 
+                    [mode] => payment
+                    [payment_intent] => pi_3NYoDXLZuf9T2ZCl2Jl6QpUf
+                    [payment_link] => 
+                    [payment_method_collection] => always
+                    [payment_method_options] => stdClass Object
+                        (
+                        )
+
+                    [payment_method_types] => Array
+                        (
+                            [0] => card
+                        )
+
+                    [payment_status] => paid
+                    [phone_number_collection] => stdClass Object
+                        (
+                            [enabled] => 
+                        )
+
+                    [recovered_from] => 
+                    [setup_intent] => 
+                    [shipping_address_collection] => 
+                    [shipping_cost] => 
+                    [shipping_details] => 
+                    [shipping_options] => Array
+                        (
+                        )
+
+                    [status] => complete
+                    [submit_type] => 
+                    [subscription] => 
+                    [success_url] => http://wordpress.test/checkout-2/?payment_method=stripe_payment&order_hash=4f01ba80ce47d2218f9eb61411002911&fct_redirect=yes
+                    [total_details] => stdClass Object
+                        (
+                            [amount_discount] => 0
+                            [amount_shipping] => 0
+                            [amount_tax] => 0
+                        )
+
+                    [url] => 
                 )
 
         )
 
     [livemode] => 
-    [locale] => auto
-    [metadata] => stdClass Object
+    [pending_webhooks] => 1
+    [request] => stdClass Object
         (
+            [id] => 
+            [idempotency_key] => 
         )
 
-    [mode] => payment
-    [payment_intent] => pi_3NXdIeLZuf9T2ZCl13Vv9Uuf
-    [payment_link] => plink_1NXIggLZuf9T2ZCloX6lafgW
-    [payment_method_collection] => always
-    [payment_method_options] => stdClass Object
-        (
-        )
-
-    [payment_method_types] => Array
-        (
-            [0] => card
-        )
-
-    [payment_status] => paid
-    [phone_number_collection] => stdClass Object
-        (
-            [enabled] => 
-        )
-
-    [recovered_from] => 
-    [setup_intent] => 
-    [shipping_address_collection] => 
-    [shipping_cost] => 
-    [shipping_details] => 
-    [shipping_options] => Array
-        (
-        )
-
-    [status] => complete
-    [submit_type] => auto
-    [subscription] => 
-    [success_url] => https://stripe.com
-    [total_details] => stdClass Object
-        (
-            [amount_discount] => 0
-            [amount_shipping] => 0
-            [amount_tax] => 0
-        )
-
-    [url] => 
+    [type] => checkout.session.completed
 )
-https://api.stripe.com/v1/checkout/sessions/cs_test_a1cPlxB2ovUFvFDabKkZ2TueICyLnE9K0RaYoPEAq0t4rZXxUt4hEX0oy0stdClass Object
+paidstdClass Object
 (
-    [id] => cs_test_a1cPlxB2ovUFvFDabKkZ2TueICyLnE9K0RaYoPEAq0t4rZXxUt4hEX0oy0
-    [object] => checkout.session
-    [after_expiration] => 
-    [allow_promotion_codes] => 
-    [amount_subtotal] => 1000
-    [amount_total] => 1000
-    [automatic_tax] => stdClass Object
+    [id] => evt_1NYovpLZuf9T2ZCl6SngDIDs
+    [object] => event
+    [api_version] => 2022-11-15
+    [created] => 1690544045
+    [data] => stdClass Object
         (
-            [enabled] => 
-            [status] => 
-        )
-
-    [billing_address_collection] => auto
-    [cancel_url] => https://stripe.com
-    [client_reference_id] => 
-    [consent] => 
-    [consent_collection] => stdClass Object
-        (
-            [promotions] => none
-            [terms_of_service] => none
-        )
-
-    [created] => 1690261085
-    [currency] => usd
-    [currency_conversion] => 
-    [custom_fields] => Array
-        (
-        )
-
-    [custom_text] => stdClass Object
-        (
-            [shipping_address] => 
-            [submit] => 
-        )
-
-    [customer] => 
-    [customer_creation] => if_required
-    [customer_details] => stdClass Object
-        (
-            [address] => stdClass Object
+            [object] => stdClass Object
                 (
-                    [city] => 
-                    [country] => BD
-                    [line1] => 
-                    [line2] => 
-                    [postal_code] => 
-                    [state] => 
-                )
+                    [id] => cs_test_a1vbWYiFv0H6g6E8JqK3WcnI7OY4fm4jAYilv3W03i50ySfHAoEF4xQnYa
+                    [object] => checkout.session
+                    [after_expiration] => 
+                    [allow_promotion_codes] => 
+                    [amount_subtotal] => 3000
+                    [amount_total] => 3000
+                    [automatic_tax] => stdClass Object
+                        (
+                            [enabled] => 
+                            [status] => 
+                        )
 
-            [email] => goutom.authlab@gmail.com
-            [name] => Abc
-            [phone] => 
-            [tax_exempt] => none
-            [tax_ids] => Array
-                (
-                )
+                    [billing_address_collection] => 
+                    [cancel_url] => http://stripe.com
+                    [client_reference_id] => efcadd8b1746df13721d2d48f7ba2eca
+                    [consent] => 
+                    [consent_collection] => 
+                    [created] => 1690544015
+                    [currency] => usd
+                    [currency_conversion] => 
+                    [custom_fields] => Array
+                        (
+                        )
 
-        )
+                    [custom_text] => stdClass Object
+                        (
+                            [shipping_address] => 
+                            [submit] => 
+                        )
 
-    [customer_email] => 
-    [expires_at] => 1690347485
-    [invoice] => 
-    [invoice_creation] => stdClass Object
-        (
-            [enabled] => 
-            [invoice_data] => stdClass Object
-                (
-                    [account_tax_ids] => 
-                    [custom_fields] => 
-                    [description] => 
-                    [footer] => 
+                    [customer] => cus_OLVx4VrLj48q6y
+                    [customer_creation] => if_required
+                    [customer_details] => stdClass Object
+                        (
+                            [address] => stdClass Object
+                                (
+                                    [city] => 
+                                    [country] => BD
+                                    [line1] => 
+                                    [line2] => 
+                                    [postal_code] => 
+                                    [state] => 
+                                )
+
+                            [email] => goutom.authlab@gmail.com
+                            [name] => Abc
+                            [phone] => 
+                            [tax_exempt] => none
+                            [tax_ids] => Array
+                                (
+                                )
+
+                        )
+
+                    [customer_email] => 
+                    [expires_at] => 1690630415
+                    [invoice] => in_1NYovoLZuf9T2ZCluQPcxKW9
+                    [invoice_creation] => stdClass Object
+                        (
+                            [enabled] => 1
+                            [invoice_data] => stdClass Object
+                                (
+                                    [account_tax_ids] => 
+                                    [custom_fields] => 
+                                    [description] => Invoice for Order #efcadd8b1746df13721d2d48f7ba2eca
+                                    [footer] => 
+                                    [metadata] => stdClass Object
+                                        (
+                                        )
+
+                                    [rendering_options] => 
+                                )
+
+                        )
+
+                    [livemode] => 
+                    [locale] => 
                     [metadata] => stdClass Object
                         (
                         )
 
-                    [rendering_options] => 
+                    [mode] => payment
+                    [payment_intent] => pi_3NYovmLZuf9T2ZCl2C22WgsB
+                    [payment_link] => 
+                    [payment_method_collection] => always
+                    [payment_method_options] => stdClass Object
+                        (
+                        )
+
+                    [payment_method_types] => Array
+                        (
+                            [0] => card
+                        )
+
+                    [payment_status] => paid
+                    [phone_number_collection] => stdClass Object
+                        (
+                            [enabled] => 
+                        )
+
+                    [recovered_from] => 
+                    [setup_intent] => 
+                    [shipping_address_collection] => 
+                    [shipping_cost] => 
+                    [shipping_details] => 
+                    [shipping_options] => Array
+                        (
+                        )
+
+                    [status] => complete
+                    [submit_type] => 
+                    [subscription] => 
+                    [success_url] => http://wordpress.test/checkout-2/?payment_method=stripe_payment&order_hash=efcadd8b1746df13721d2d48f7ba2eca&fct_redirect=yes
+                    [total_details] => stdClass Object
+                        (
+                            [amount_discount] => 0
+                            [amount_shipping] => 0
+                            [amount_tax] => 0
+                        )
+
+                    [url] => 
                 )
 
         )
 
     [livemode] => 
-    [locale] => auto
-    [metadata] => stdClass Object
+    [pending_webhooks] => 1
+    [request] => stdClass Object
         (
+            [id] => 
+            [idempotency_key] => 
         )
 
-    [mode] => payment
-    [payment_intent] => pi_3NXdKaLZuf9T2ZCl15ny52rV
-    [payment_link] => plink_1NXIggLZuf9T2ZCloX6lafgW
-    [payment_method_collection] => always
-    [payment_method_options] => stdClass Object
-        (
-        )
-
-    [payment_method_types] => Array
-        (
-            [0] => card
-        )
-
-    [payment_status] => paid
-    [phone_number_collection] => stdClass Object
-        (
-            [enabled] => 
-        )
-
-    [recovered_from] => 
-    [setup_intent] => 
-    [shipping_address_collection] => 
-    [shipping_cost] => 
-    [shipping_details] => 
-    [shipping_options] => Array
-        (
-        )
-
-    [status] => complete
-    [submit_type] => auto
-    [subscription] => 
-    [success_url] => https://stripe.com
-    [total_details] => stdClass Object
-        (
-            [amount_discount] => 0
-            [amount_shipping] => 0
-            [amount_tax] => 0
-        )
-
-    [url] => 
+    [type] => checkout.session.completed
 )
-https://api.stripe.com/v1/checkout/sessions/cs_test_a1rtZm3zyzVHTHnNEBZxuKRsunROsbxxtFLNDjoV6ZzqPErvOrDzcgKbnjstdClass Object
+paidstdClass Object
 (
-    [id] => cs_test_a1rtZm3zyzVHTHnNEBZxuKRsunROsbxxtFLNDjoV6ZzqPErvOrDzcgKbnj
-    [object] => checkout.session
-    [after_expiration] => 
-    [allow_promotion_codes] => 
-    [amount_subtotal] => 1000
-    [amount_total] => 1000
-    [automatic_tax] => stdClass Object
+    [id] => evt_1NYp42LZuf9T2ZCliGWcxxK5
+    [object] => event
+    [api_version] => 2022-11-15
+    [created] => 1690544554
+    [data] => stdClass Object
         (
-            [enabled] => 
-            [status] => 
-        )
-
-    [billing_address_collection] => auto
-    [cancel_url] => https://stripe.com
-    [client_reference_id] => 
-    [consent] => 
-    [consent_collection] => stdClass Object
-        (
-            [promotions] => none
-            [terms_of_service] => none
-        )
-
-    [created] => 1690261196
-    [currency] => usd
-    [currency_conversion] => 
-    [custom_fields] => Array
-        (
-        )
-
-    [custom_text] => stdClass Object
-        (
-            [shipping_address] => 
-            [submit] => 
-        )
-
-    [customer] => 
-    [customer_creation] => if_required
-    [customer_details] => stdClass Object
-        (
-            [address] => stdClass Object
+            [object] => stdClass Object
                 (
-                    [city] => 
-                    [country] => BD
-                    [line1] => 
-                    [line2] => 
-                    [postal_code] => 
-                    [state] => 
-                )
+                    [id] => cs_test_a1ppr0M174g7pndDZNE0fTO1OkwOdRB1hAzMUrHFMykNxh5M1tKRqG8F5m
+                    [object] => checkout.session
+                    [after_expiration] => 
+                    [allow_promotion_codes] => 
+                    [amount_subtotal] => 3000
+                    [amount_total] => 3000
+                    [automatic_tax] => stdClass Object
+                        (
+                            [enabled] => 
+                            [status] => 
+                        )
 
-            [email] => goutom.authlab@gmail.com
-            [name] => Abc
-            [phone] => 
-            [tax_exempt] => none
-            [tax_ids] => Array
-                (
-                )
+                    [billing_address_collection] => 
+                    [cancel_url] => http://stripe.com
+                    [client_reference_id] => 7e2da5cb37e8cbe9592576ac570b053a
+                    [consent] => 
+                    [consent_collection] => 
+                    [created] => 1690544532
+                    [currency] => usd
+                    [currency_conversion] => 
+                    [custom_fields] => Array
+                        (
+                        )
 
-        )
+                    [custom_text] => stdClass Object
+                        (
+                            [shipping_address] => 
+                            [submit] => 
+                        )
 
-    [customer_email] => 
-    [expires_at] => 1690347596
-    [invoice] => 
-    [invoice_creation] => stdClass Object
-        (
-            [enabled] => 
-            [invoice_data] => stdClass Object
-                (
-                    [account_tax_ids] => 
-                    [custom_fields] => 
-                    [description] => 
-                    [footer] => 
+                    [customer] => cus_OLW6h1pRoN9c7g
+                    [customer_creation] => if_required
+                    [customer_details] => stdClass Object
+                        (
+                            [address] => stdClass Object
+                                (
+                                    [city] => 
+                                    [country] => BD
+                                    [line1] => 
+                                    [line2] => 
+                                    [postal_code] => 
+                                    [state] => 
+                                )
+
+                            [email] => goutom.authlab@gmail.com
+                            [name] => Abc
+                            [phone] => 
+                            [tax_exempt] => none
+                            [tax_ids] => Array
+                                (
+                                )
+
+                        )
+
+                    [customer_email] => 
+                    [expires_at] => 1690630931
+                    [invoice] => in_1NYp41LZuf9T2ZClzSBbVo8C
+                    [invoice_creation] => stdClass Object
+                        (
+                            [enabled] => 1
+                            [invoice_data] => stdClass Object
+                                (
+                                    [account_tax_ids] => 
+                                    [custom_fields] => 
+                                    [description] => Invoice for Order #7e2da5cb37e8cbe9592576ac570b053a
+                                    [footer] => 
+                                    [metadata] => stdClass Object
+                                        (
+                                        )
+
+                                    [rendering_options] => 
+                                )
+
+                        )
+
+                    [livemode] => 
+                    [locale] => 
                     [metadata] => stdClass Object
                         (
                         )
 
-                    [rendering_options] => 
+                    [mode] => payment
+                    [payment_intent] => pi_3NYp40LZuf9T2ZCl0mRQucWG
+                    [payment_link] => 
+                    [payment_method_collection] => always
+                    [payment_method_options] => stdClass Object
+                        (
+                        )
+
+                    [payment_method_types] => Array
+                        (
+                            [0] => card
+                        )
+
+                    [payment_status] => paid
+                    [phone_number_collection] => stdClass Object
+                        (
+                            [enabled] => 
+                        )
+
+                    [recovered_from] => 
+                    [setup_intent] => 
+                    [shipping_address_collection] => 
+                    [shipping_cost] => 
+                    [shipping_details] => 
+                    [shipping_options] => Array
+                        (
+                        )
+
+                    [status] => complete
+                    [submit_type] => 
+                    [subscription] => 
+                    [success_url] => http://wordpress.test/checkout-2/?payment_method=stripe_payment&order_hash=7e2da5cb37e8cbe9592576ac570b053a&fct_redirect=yes
+                    [total_details] => stdClass Object
+                        (
+                            [amount_discount] => 0
+                            [amount_shipping] => 0
+                            [amount_tax] => 0
+                        )
+
+                    [url] => 
                 )
 
         )
 
     [livemode] => 
-    [locale] => auto
-    [metadata] => stdClass Object
+    [pending_webhooks] => 1
+    [request] => stdClass Object
         (
+            [id] => 
+            [idempotency_key] => 
         )
 
-    [mode] => payment
-    [payment_intent] => pi_3NXdLxLZuf9T2ZCl2wNO0dxI
-    [payment_link] => plink_1NXIggLZuf9T2ZCloX6lafgW
-    [payment_method_collection] => always
-    [payment_method_options] => stdClass Object
-        (
-        )
-
-    [payment_method_types] => Array
-        (
-            [0] => card
-        )
-
-    [payment_status] => paid
-    [phone_number_collection] => stdClass Object
-        (
-            [enabled] => 
-        )
-
-    [recovered_from] => 
-    [setup_intent] => 
-    [shipping_address_collection] => 
-    [shipping_cost] => 
-    [shipping_details] => 
-    [shipping_options] => Array
-        (
-        )
-
-    [status] => complete
-    [submit_type] => auto
-    [subscription] => 
-    [success_url] => https://stripe.com
-    [total_details] => stdClass Object
-        (
-            [amount_discount] => 0
-            [amount_shipping] => 0
-            [amount_tax] => 0
-        )
-
-    [url] => 
+    [type] => checkout.session.completed
 )
+paidstdClass Object
+(
+    [id] => evt_1NYp62LZuf9T2ZClbv7C2s0s
+    [object] => event
+    [api_version] => 2022-11-15
+    [created] => 1690544678
+    [data] => stdClass Object
+        (
+            [object] => stdClass Object
+                (
+                    [id] => cs_test_a1AbaWg8W14HhSL1muNBcAtjPYnqJZThFwnk8W5Z5KqMjLyGeoprnbVhoR
+                    [object] => checkout.session
+                    [after_expiration] => 
+                    [allow_promotion_codes] => 
+                    [amount_subtotal] => 3000
+                    [amount_total] => 3000
+                    [automatic_tax] => stdClass Object
+                        (
+                            [enabled] => 
+                            [status] => 
+                        )
+
+                    [billing_address_collection] => 
+                    [cancel_url] => http://stripe.com
+                    [client_reference_id] => 54aab03d0609a6469c3c9c34d7a03b65
+                    [consent] => 
+                    [consent_collection] => 
+                    [created] => 1690458278
+                    [currency] => usd
+                    [currency_conversion] => 
+                    [custom_fields] => Array
+                        (
+                        )
+
+                    [custom_text] => stdClass Object
+                        (
+                            [shipping_address] => 
+                            [submit] => 
+                        )
+
+                    [customer] => 
+                    [customer_creation] => if_required
+                    [customer_details] => 
+                    [customer_email] => 
+                    [expires_at] => 1690544678
+                    [invoice] => 
+                    [invoice_creation] => stdClass Object
+                        (
+                            [enabled] => 1
+                            [invoice_data] => stdClass Object
+                                (
+                                    [account_tax_ids] => 
+                                    [custom_fields] => 
+                                    [description] => Invoice for Order #54aab03d0609a6469c3c9c34d7a03b65
+                                    [footer] => 
+                                    [metadata] => stdClass Object
+                                        (
+                                        )
+
+                                    [rendering_options] => 
+                                )
+
+                        )
+
+                    [livemode] => 
+                    [locale] => 
+                    [metadata] => stdClass Object
+                        (
+                        )
+
+                    [mode] => payment
+                    [payment_intent] => 
+                    [payment_link] => 
+                    [payment_method_collection] => always
+                    [payment_method_options] => stdClass Object
+                        (
+                        )
+
+                    [payment_method_types] => Array
+                        (
+                            [0] => card
+                        )
+
+                    [payment_status] => unpaid
+                    [phone_number_collection] => stdClass Object
+                        (
+                            [enabled] => 
+                        )
+
+                    [recovered_from] => 
+                    [setup_intent] => 
+                    [shipping_address_collection] => 
+                    [shipping_cost] => 
+                    [shipping_details] => 
+                    [shipping_options] => Array
+                        (
+                        )
+
+                    [status] => expired
+                    [submit_type] => 
+                    [subscription] => 
+                    [success_url] => http://wordpress.test/checkout-2/?payment_method=stripe_payment&order_hash=54aab03d0609a6469c3c9c34d7a03b65&fct_redirect=yes
+                    [total_details] => stdClass Object
+                        (
+                            [amount_discount] => 0
+                            [amount_shipping] => 0
+                            [amount_tax] => 0
+                        )
+
+                    [url] => 
+                )
+
+        )
+
+    [livemode] => 
+    [pending_webhooks] => 1
+    [request] => stdClass Object
+        (
+            [id] => 
+            [idempotency_key] => 
+        )
+
+    [type] => checkout.session.expired
+)
+unpaidstdClass Object
+(
+    [id] => evt_1NYp8MLZuf9T2ZClK71vQpyF
+    [object] => event
+    [api_version] => 2022-11-15
+    [created] => 1690544822
+    [data] => stdClass Object
+        (
+            [object] => stdClass Object
+                (
+                    [id] => cs_test_a1qWfAgYWyFtm5rFoTAcHdZ4AEy0xoWmTEIKlqn9rkQgcXu67XYAxoluHW
+                    [object] => checkout.session
+                    [after_expiration] => 
+                    [allow_promotion_codes] => 
+                    [amount_subtotal] => 3000
+                    [amount_total] => 3000
+                    [automatic_tax] => stdClass Object
+                        (
+                            [enabled] => 
+                            [status] => 
+                        )
+
+                    [billing_address_collection] => 
+                    [cancel_url] => http://stripe.com
+                    [client_reference_id] => 03b519510746fd88df2fb70c18ae7c08
+                    [consent] => 
+                    [consent_collection] => 
+                    [created] => 1690458422
+                    [currency] => usd
+                    [currency_conversion] => 
+                    [custom_fields] => Array
+                        (
+                        )
+
+                    [custom_text] => stdClass Object
+                        (
+                            [shipping_address] => 
+                            [submit] => 
+                        )
+
+                    [customer] => 
+                    [customer_creation] => if_required
+                    [customer_details] => 
+                    [customer_email] => 
+                    [expires_at] => 1690544822
+                    [invoice] => 
+                    [invoice_creation] => stdClass Object
+                        (
+                            [enabled] => 1
+                            [invoice_data] => stdClass Object
+                                (
+                                    [account_tax_ids] => 
+                                    [custom_fields] => 
+                                    [description] => Invoice for Order #03b519510746fd88df2fb70c18ae7c08
+                                    [footer] => 
+                                    [metadata] => stdClass Object
+                                        (
+                                        )
+
+                                    [rendering_options] => 
+                                )
+
+                        )
+
+                    [livemode] => 
+                    [locale] => 
+                    [metadata] => stdClass Object
+                        (
+                        )
+
+                    [mode] => payment
+                    [payment_intent] => 
+                    [payment_link] => 
+                    [payment_method_collection] => always
+                    [payment_method_options] => stdClass Object
+                        (
+                        )
+
+                    [payment_method_types] => Array
+                        (
+                            [0] => card
+                        )
+
+                    [payment_status] => unpaid
+                    [phone_number_collection] => stdClass Object
+                        (
+                            [enabled] => 
+                        )
+
+                    [recovered_from] => 
+                    [setup_intent] => 
+                    [shipping_address_collection] => 
+                    [shipping_cost] => 
+                    [shipping_details] => 
+                    [shipping_options] => Array
+                        (
+                        )
+
+                    [status] => expired
+                    [submit_type] => 
+                    [subscription] => 
+                    [success_url] => http://wordpress.test/checkout-2/?payment_method=stripe_payment&order_hash=03b519510746fd88df2fb70c18ae7c08&fct_redirect=yes
+                    [total_details] => stdClass Object
+                        (
+                            [amount_discount] => 0
+                            [amount_shipping] => 0
+                            [amount_tax] => 0
+                        )
+
+                    [url] => 
+                )
+
+        )
+
+    [livemode] => 
+    [pending_webhooks] => 1
+    [request] => stdClass Object
+        (
+            [id] => 
+            [idempotency_key] => 
+        )
+
+    [type] => checkout.session.expired
+)
+unpaidstdClass Object
+(
+    [id] => evt_1NYpDDLZuf9T2ZClF5qhBVdS
+    [object] => event
+    [api_version] => 2022-11-15
+    [created] => 1690545123
+    [data] => stdClass Object
+        (
+            [object] => stdClass Object
+                (
+                    [id] => cs_test_a1xutk5dPJyKF0QD9yAuCcOdH7flLujliB8s2javVNRau0xD77TKiQU9Iy
+                    [object] => checkout.session
+                    [after_expiration] => 
+                    [allow_promotion_codes] => 
+                    [amount_subtotal] => 3000
+                    [amount_total] => 3000
+                    [automatic_tax] => stdClass Object
+                        (
+                            [enabled] => 
+                            [status] => 
+                        )
+
+                    [billing_address_collection] => 
+                    [cancel_url] => http://stripe.com
+                    [client_reference_id] => 5c91b0c053e0d1385145f2131d64e993
+                    [consent] => 
+                    [consent_collection] => 
+                    [created] => 1690458723
+                    [currency] => usd
+                    [currency_conversion] => 
+                    [custom_fields] => Array
+                        (
+                        )
+
+                    [custom_text] => stdClass Object
+                        (
+                            [shipping_address] => 
+                            [submit] => 
+                        )
+
+                    [customer] => 
+                    [customer_creation] => if_required
+                    [customer_details] => 
+                    [customer_email] => 
+                    [expires_at] => 1690545123
+                    [invoice] => 
+                    [invoice_creation] => stdClass Object
+                        (
+                            [enabled] => 1
+                            [invoice_data] => stdClass Object
+                                (
+                                    [account_tax_ids] => 
+                                    [custom_fields] => 
+                                    [description] => Invoice for Order #5c91b0c053e0d1385145f2131d64e993
+                                    [footer] => 
+                                    [metadata] => stdClass Object
+                                        (
+                                        )
+
+                                    [rendering_options] => 
+                                )
+
+                        )
+
+                    [livemode] => 
+                    [locale] => 
+                    [metadata] => stdClass Object
+                        (
+                        )
+
+                    [mode] => payment
+                    [payment_intent] => 
+                    [payment_link] => 
+                    [payment_method_collection] => always
+                    [payment_method_options] => stdClass Object
+                        (
+                        )
+
+                    [payment_method_types] => Array
+                        (
+                            [0] => card
+                        )
+
+                    [payment_status] => unpaid
+                    [phone_number_collection] => stdClass Object
+                        (
+                            [enabled] => 
+                        )
+
+                    [recovered_from] => 
+                    [setup_intent] => 
+                    [shipping_address_collection] => 
+                    [shipping_cost] => 
+                    [shipping_details] => 
+                    [shipping_options] => Array
+                        (
+                        )
+
+                    [status] => expired
+                    [submit_type] => 
+                    [subscription] => 
+                    [success_url] => http://wordpress.test/checkout-2/?payment_method=stripe_payment&order_hash=5c91b0c053e0d1385145f2131d64e993&fct_redirect=yes
+                    [total_details] => stdClass Object
+                        (
+                            [amount_discount] => 0
+                            [amount_shipping] => 0
+                            [amount_tax] => 0
+                        )
+
+                    [url] => 
+                )
+
+        )
+
+    [livemode] => 
+    [pending_webhooks] => 1
+    [request] => stdClass Object
+        (
+            [id] => 
+            [idempotency_key] => 
+        )
+
+    [type] => checkout.session.expired
+)
+unpaidstdClass Object
+(
+    [id] => evt_1NZn5DLZuf9T2ZClDu3lUZ59
+    [object] => event
+    [api_version] => 2022-11-15
+    [created] => 1690775267
+    [data] => stdClass Object
+        (
+            [object] => stdClass Object
+                (
+                    [id] => cs_test_a1oFZJ7AqC3hdpqgUC9V6LFm5wFPO0Q7zhdE4FuBGhLbHtyrbOW7JA7Bb2
+                    [object] => checkout.session
+                    [after_expiration] => 
+                    [allow_promotion_codes] => 
+                    [amount_subtotal] => 3000
+                    [amount_total] => 3000
+                    [automatic_tax] => stdClass Object
+                        (
+                            [enabled] => 
+                            [status] => 
+                        )
+
+                    [billing_address_collection] => 
+                    [cancel_url] => http://stripe.com
+                    [client_reference_id] => 8d6cf2ff2e3163be35cb2cd607c2acfa
+                    [consent] => 
+                    [consent_collection] => 
+                    [created] => 1690775239
+                    [currency] => usd
+                    [currency_conversion] => 
+                    [custom_fields] => Array
+                        (
+                        )
+
+                    [custom_text] => stdClass Object
+                        (
+                            [shipping_address] => 
+                            [submit] => 
+                        )
+
+                    [customer] => cus_OMW7ASnxSsSq82
+                    [customer_creation] => if_required
+                    [customer_details] => stdClass Object
+                        (
+                            [address] => stdClass Object
+                                (
+                                    [city] => 
+                                    [country] => BD
+                                    [line1] => 
+                                    [line2] => 
+                                    [postal_code] => 
+                                    [state] => 
+                                )
+
+                            [email] => goutom.authlab@gmail.com
+                            [name] => Abc
+                            [phone] => 
+                            [tax_exempt] => none
+                            [tax_ids] => Array
+                                (
+                                )
+
+                        )
+
+                    [customer_email] => 
+                    [expires_at] => 1690861639
+                    [invoice] => in_1NZn5DLZuf9T2ZClT15M1b9E
+                    [invoice_creation] => stdClass Object
+                        (
+                            [enabled] => 1
+                            [invoice_data] => stdClass Object
+                                (
+                                    [account_tax_ids] => 
+                                    [custom_fields] => 
+                                    [description] => Invoice for Order #8d6cf2ff2e3163be35cb2cd607c2acfa
+                                    [footer] => 
+                                    [metadata] => stdClass Object
+                                        (
+                                        )
+
+                                    [rendering_options] => 
+                                )
+
+                        )
+
+                    [livemode] => 
+                    [locale] => 
+                    [metadata] => stdClass Object
+                        (
+                        )
+
+                    [mode] => payment
+                    [payment_intent] => pi_3NZn5BLZuf9T2ZCl2ZmQHBOA
+                    [payment_link] => 
+                    [payment_method_collection] => always
+                    [payment_method_options] => stdClass Object
+                        (
+                        )
+
+                    [payment_method_types] => Array
+                        (
+                            [0] => card
+                        )
+
+                    [payment_status] => paid
+                    [phone_number_collection] => stdClass Object
+                        (
+                            [enabled] => 
+                        )
+
+                    [recovered_from] => 
+                    [setup_intent] => 
+                    [shipping_address_collection] => 
+                    [shipping_cost] => 
+                    [shipping_details] => 
+                    [shipping_options] => Array
+                        (
+                        )
+
+                    [status] => complete
+                    [submit_type] => 
+                    [subscription] => 
+                    [success_url] => http://wordpress.test/checkout-2/?payment_method=stripe_payment&order_hash=8d6cf2ff2e3163be35cb2cd607c2acfa&fct_redirect=yes
+                    [total_details] => stdClass Object
+                        (
+                            [amount_discount] => 0
+                            [amount_shipping] => 0
+                            [amount_tax] => 0
+                        )
+
+                    [url] => 
+                )
+
+        )
+
+    [livemode] => 
+    [pending_webhooks] => 1
+    [request] => stdClass Object
+        (
+            [id] => 
+            [idempotency_key] => 
+        )
+
+    [type] => checkout.session.completed
+)
+paidstdClass Object
+(
+    [id] => evt_1NZnLrLZuf9T2ZCls2mPBUbF
+    [object] => event
+    [api_version] => 2022-11-15
+    [created] => 1690776299
+    [data] => stdClass Object
+        (
+            [object] => stdClass Object
+                (
+                    [id] => cs_test_a1TLDSqSq9mhjD09nKKVj2JwR3mYVyELr8AYmLsNeRiu4vLNyAqAKuQcOd
+                    [object] => checkout.session
+                    [after_expiration] => 
+                    [allow_promotion_codes] => 
+                    [amount_subtotal] => 3000
+                    [amount_total] => 3000
+                    [automatic_tax] => stdClass Object
+                        (
+                            [enabled] => 
+                            [status] => 
+                        )
+
+                    [billing_address_collection] => 
+                    [cancel_url] => http://stripe.com
+                    [client_reference_id] => e67a166eac7a9551918610a8bb7b049a
+                    [consent] => 
+                    [consent_collection] => 
+                    [created] => 1690776261
+                    [currency] => usd
+                    [currency_conversion] => 
+                    [custom_fields] => Array
+                        (
+                        )
+
+                    [custom_text] => stdClass Object
+                        (
+                            [shipping_address] => 
+                            [submit] => 
+                        )
+
+                    [customer] => cus_OMWO4Cmw9aACSC
+                    [customer_creation] => if_required
+                    [customer_details] => stdClass Object
+                        (
+                            [address] => stdClass Object
+                                (
+                                    [city] => 
+                                    [country] => BD
+                                    [line1] => 
+                                    [line2] => 
+                                    [postal_code] => 
+                                    [state] => 
+                                )
+
+                            [email] => goutom.authlab@gmail.com
+                            [name] => Abc
+                            [phone] => 
+                            [tax_exempt] => none
+                            [tax_ids] => Array
+                                (
+                                )
+
+                        )
+
+                    [customer_email] => 
+                    [expires_at] => 1690862661
+                    [invoice] => in_1NZnLrLZuf9T2ZClDEAPGhaX
+                    [invoice_creation] => stdClass Object
+                        (
+                            [enabled] => 1
+                            [invoice_data] => stdClass Object
+                                (
+                                    [account_tax_ids] => 
+                                    [custom_fields] => 
+                                    [description] => Invoice for Order #e67a166eac7a9551918610a8bb7b049a
+                                    [footer] => 
+                                    [metadata] => stdClass Object
+                                        (
+                                        )
+
+                                    [rendering_options] => 
+                                )
+
+                        )
+
+                    [livemode] => 
+                    [locale] => 
+                    [metadata] => stdClass Object
+                        (
+                        )
+
+                    [mode] => payment
+                    [payment_intent] => pi_3NZnLpLZuf9T2ZCl3OXOmzUH
+                    [payment_link] => 
+                    [payment_method_collection] => always
+                    [payment_method_options] => stdClass Object
+                        (
+                        )
+
+                    [payment_method_types] => Array
+                        (
+                            [0] => card
+                        )
+
+                    [payment_status] => paid
+                    [phone_number_collection] => stdClass Object
+                        (
+                            [enabled] => 
+                        )
+
+                    [recovered_from] => 
+                    [setup_intent] => 
+                    [shipping_address_collection] => 
+                    [shipping_cost] => 
+                    [shipping_details] => 
+                    [shipping_options] => Array
+                        (
+                        )
+
+                    [status] => complete
+                    [submit_type] => 
+                    [subscription] => 
+                    [success_url] => http://wordpress.test/checkout-2/?payment_method=stripe_payment&order_hash=e67a166eac7a9551918610a8bb7b049a&fct_redirect=yes
+                    [total_details] => stdClass Object
+                        (
+                            [amount_discount] => 0
+                            [amount_shipping] => 0
+                            [amount_tax] => 0
+                        )
+
+                    [url] => 
+                )
+
+        )
+
+    [livemode] => 
+    [pending_webhooks] => 1
+    [request] => stdClass Object
+        (
+            [id] => 
+            [idempotency_key] => 
+        )
+
+    [type] => checkout.session.completed
+)
+paidstdClass Object
+(
+    [id] => evt_1NZnNYLZuf9T2ZClGmhnjZ3T
+    [object] => event
+    [api_version] => 2022-11-15
+    [created] => 1690776404
+    [data] => stdClass Object
+        (
+            [object] => stdClass Object
+                (
+                    [id] => cs_test_a1wPafIyUqUacsGCdxWXQfm5wY0tkzkApmbVRH8qPRdRlAClwv67tud5TY
+                    [object] => checkout.session
+                    [after_expiration] => 
+                    [allow_promotion_codes] => 
+                    [amount_subtotal] => 3000
+                    [amount_total] => 3000
+                    [automatic_tax] => stdClass Object
+                        (
+                            [enabled] => 
+                            [status] => 
+                        )
+
+                    [billing_address_collection] => 
+                    [cancel_url] => http://stripe.com
+                    [client_reference_id] => b3902b9e3aae11f1ee3b4edb21a8c1d8
+                    [consent] => 
+                    [consent_collection] => 
+                    [created] => 1690776387
+                    [currency] => usd
+                    [currency_conversion] => 
+                    [custom_fields] => Array
+                        (
+                        )
+
+                    [custom_text] => stdClass Object
+                        (
+                            [shipping_address] => 
+                            [submit] => 
+                        )
+
+                    [customer] => cus_OMWQDPK6JWCi5s
+                    [customer_creation] => if_required
+                    [customer_details] => stdClass Object
+                        (
+                            [address] => stdClass Object
+                                (
+                                    [city] => 
+                                    [country] => BD
+                                    [line1] => 
+                                    [line2] => 
+                                    [postal_code] => 
+                                    [state] => 
+                                )
+
+                            [email] => goutom.authlab@gmail.com
+                            [name] => Abc
+                            [phone] => 
+                            [tax_exempt] => none
+                            [tax_ids] => Array
+                                (
+                                )
+
+                        )
+
+                    [customer_email] => 
+                    [expires_at] => 1690862787
+                    [invoice] => in_1NZnNXLZuf9T2ZClcNOyzERq
+                    [invoice_creation] => stdClass Object
+                        (
+                            [enabled] => 1
+                            [invoice_data] => stdClass Object
+                                (
+                                    [account_tax_ids] => 
+                                    [custom_fields] => 
+                                    [description] => Invoice for Order #b3902b9e3aae11f1ee3b4edb21a8c1d8
+                                    [footer] => 
+                                    [metadata] => stdClass Object
+                                        (
+                                        )
+
+                                    [rendering_options] => 
+                                )
+
+                        )
+
+                    [livemode] => 
+                    [locale] => 
+                    [metadata] => stdClass Object
+                        (
+                        )
+
+                    [mode] => payment
+                    [payment_intent] => pi_3NZnNVLZuf9T2ZCl3jNsOZrU
+                    [payment_link] => 
+                    [payment_method_collection] => always
+                    [payment_method_options] => stdClass Object
+                        (
+                        )
+
+                    [payment_method_types] => Array
+                        (
+                            [0] => card
+                        )
+
+                    [payment_status] => paid
+                    [phone_number_collection] => stdClass Object
+                        (
+                            [enabled] => 
+                        )
+
+                    [recovered_from] => 
+                    [setup_intent] => 
+                    [shipping_address_collection] => 
+                    [shipping_cost] => 
+                    [shipping_details] => 
+                    [shipping_options] => Array
+                        (
+                        )
+
+                    [status] => complete
+                    [submit_type] => 
+                    [subscription] => 
+                    [success_url] => http://wordpress.test/checkout-2/?payment_method=stripe_payment&order_hash=b3902b9e3aae11f1ee3b4edb21a8c1d8&fct_redirect=yes
+                    [total_details] => stdClass Object
+                        (
+                            [amount_discount] => 0
+                            [amount_shipping] => 0
+                            [amount_tax] => 0
+                        )
+
+                    [url] => 
+                )
+
+        )
+
+    [livemode] => 
+    [pending_webhooks] => 1
+    [request] => stdClass Object
+        (
+            [id] => 
+            [idempotency_key] => 
+        )
+
+    [type] => checkout.session.completed
+)
+paidstdClass Object
+(
+    [id] => evt_1NZnP8LZuf9T2ZClgima4RFN
+    [object] => event
+    [api_version] => 2022-11-15
+    [created] => 1690776502
+    [data] => stdClass Object
+        (
+            [object] => stdClass Object
+                (
+                    [id] => cs_test_a1FrPb7TvXvWiMDIOHs2UDpBrylbPJDzw13rvH6B2GyJiBT33IwgMbWhdT
+                    [object] => checkout.session
+                    [after_expiration] => 
+                    [allow_promotion_codes] => 
+                    [amount_subtotal] => 3000
+                    [amount_total] => 3000
+                    [automatic_tax] => stdClass Object
+                        (
+                            [enabled] => 
+                            [status] => 
+                        )
+
+                    [billing_address_collection] => 
+                    [cancel_url] => http://stripe.com
+                    [client_reference_id] => 9b02a613015be3b75e7a1eb830176077
+                    [consent] => 
+                    [consent_collection] => 
+                    [created] => 1690776485
+                    [currency] => usd
+                    [currency_conversion] => 
+                    [custom_fields] => Array
+                        (
+                        )
+
+                    [custom_text] => stdClass Object
+                        (
+                            [shipping_address] => 
+                            [submit] => 
+                        )
+
+                    [customer] => cus_OMWSJoDVDjVOtO
+                    [customer_creation] => if_required
+                    [customer_details] => stdClass Object
+                        (
+                            [address] => stdClass Object
+                                (
+                                    [city] => 
+                                    [country] => BD
+                                    [line1] => 
+                                    [line2] => 
+                                    [postal_code] => 
+                                    [state] => 
+                                )
+
+                            [email] => goutom.authlab@gmail.com
+                            [name] => Abc
+                            [phone] => 
+                            [tax_exempt] => none
+                            [tax_ids] => Array
+                                (
+                                )
+
+                        )
+
+                    [customer_email] => 
+                    [expires_at] => 1690862885
+                    [invoice] => in_1NZnP8LZuf9T2ZClVcMj4jgr
+                    [invoice_creation] => stdClass Object
+                        (
+                            [enabled] => 1
+                            [invoice_data] => stdClass Object
+                                (
+                                    [account_tax_ids] => 
+                                    [custom_fields] => 
+                                    [description] => Invoice for Order #9b02a613015be3b75e7a1eb830176077
+                                    [footer] => 
+                                    [metadata] => stdClass Object
+                                        (
+                                        )
+
+                                    [rendering_options] => 
+                                )
+
+                        )
+
+                    [livemode] => 
+                    [locale] => 
+                    [metadata] => stdClass Object
+                        (
+                        )
+
+                    [mode] => payment
+                    [payment_intent] => pi_3NZnP6LZuf9T2ZCl2UQ3zfaS
+                    [payment_link] => 
+                    [payment_method_collection] => always
+                    [payment_method_options] => stdClass Object
+                        (
+                        )
+
+                    [payment_method_types] => Array
+                        (
+                            [0] => card
+                        )
+
+                    [payment_status] => paid
+                    [phone_number_collection] => stdClass Object
+                        (
+                            [enabled] => 
+                        )
+
+                    [recovered_from] => 
+                    [setup_intent] => 
+                    [shipping_address_collection] => 
+                    [shipping_cost] => 
+                    [shipping_details] => 
+                    [shipping_options] => Array
+                        (
+                        )
+
+                    [status] => complete
+                    [submit_type] => 
+                    [subscription] => 
+                    [success_url] => http://wordpress.test/checkout-2/?payment_method=stripe_payment&order_hash=9b02a613015be3b75e7a1eb830176077&fct_redirect=yes
+                    [total_details] => stdClass Object
+                        (
+                            [amount_discount] => 0
+                            [amount_shipping] => 0
+                            [amount_tax] => 0
+                        )
+
+                    [url] => 
+                )
+
+        )
+
+    [livemode] => 
+    [pending_webhooks] => 1
+    [request] => stdClass Object
+        (
+            [id] => 
+            [idempotency_key] => 
+        )
+
+    [type] => checkout.session.completed
+)
+paid

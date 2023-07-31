@@ -4,8 +4,6 @@ use FluentCart\Framework\Support\Arr;
 
 class StripeApi
 {
-
-
     private $createSessionUrl;
 
     public function __construct()
@@ -72,8 +70,6 @@ class StripeApi
 
         $data =  json_decode($post_data);
 
-
-
         if (!property_exists($data, 'event')) {
             return $data;
         } else {
@@ -116,7 +112,7 @@ class StripeApi
         $sessionPayload = array(
             'client_reference_id' => $args['client_reference_id'],
             'success_url' => $args['success_url'],
-            'cancel_url' => 'http://example.com/cancel',
+            'cancel_url' => 'http://stripe.com',
             'payment_method_types' => $args['payment_method_type'],
             'line_items' => $lineItems,
             'mode' => 'payment',
@@ -140,7 +136,7 @@ class StripeApi
         );
 
         $sessionResponse = wp_remote_post($this->createSessionUrl, $sessionArgs);
-     
+
         if (is_wp_error($sessionResponse)) {
             echo "API Error: " . $sessionResponse->get_error_message();
             exit;
@@ -156,8 +152,6 @@ class StripeApi
     public function getInvoice($checkoutSessionId, $apiKey)
     {
         $apiUrl = 'https://api.stripe.com/v1/checkout/sessions/' . $checkoutSessionId;
-        error_log(print_r($apiUrl, true), 3, __DIR__ . '/debug.log');
-
 
         $args = array(
             'headers' => array(
@@ -169,24 +163,16 @@ class StripeApi
 
         if (!is_wp_error($checkoutSessionResponse) && $checkoutSessionResponse['response']['code'] === 200) {
             $checkoutSession = json_decode($checkoutSessionResponse['body']);
-            error_log(print_r($checkoutSession, true), 3, __DIR__ . '/debug.log');
-
             if (isset($checkoutSession->invoice)) {
                 $invoiceId = $checkoutSession->invoice;
-                error_log(print_r($invoiceId, true), 3, __DIR__ . '/debug.log');
-
                 $invoiceUrl = 'https://api.stripe.com/v1/invoices/' . $invoiceId;
-
 
                 $invoiceResponse = wp_remote_get($invoiceUrl, $args);
 
-
                 if (!is_wp_error($invoiceResponse) && $invoiceResponse['response']['code'] === 200) {
                     $invoice = json_decode($invoiceResponse['body']);
-                    error_log(print_r($invoice, true), 3, __DIR__ . '/debug.log');
                     return $invoice;
                 } else {
-
                     error_log('Error fetching invoice: ' . print_r($invoiceResponse, true), 3, __DIR__ . '/debug.log');
                     return null;
                 }

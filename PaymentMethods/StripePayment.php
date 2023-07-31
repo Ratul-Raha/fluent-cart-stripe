@@ -1,7 +1,9 @@
 <?php
 
 use FluentCart\App\Modules\PaymentMethods\BasePaymentMethod;
+use Stripe\Stripe;
 
+use FluentCart\App\Vite;
 
 class StripePayment extends BasePaymentMethod
 {
@@ -17,6 +19,8 @@ class StripePayment extends BasePaymentMethod
             'stripe_payment',
             self::BRAND_COLOR
         );
+
+        add_action('fluent-cart/before_render_payment_method_' . $this->slug, [$this, 'loadCheckoutJs'], 10, 1);
     }
 
     public function makePayment($orderItem)
@@ -24,6 +28,7 @@ class StripePayment extends BasePaymentMethod
         $hash = $this->resolveOrderHash($orderItem);
         $apiKey = (new StripeSettings($this->slug))->getApiKey();
         $customer = $orderItem->customer;
+        $stripeSetting = $this->getSettings();
 
         $paymentArgs = array(
             'payment_method_type' => ['card'],
@@ -38,22 +43,47 @@ class StripePayment extends BasePaymentMethod
 
         $invoiceResponse = (new StripeApi())->makeApiCall('invoices', $paymentArgs, $apiKey, 'POST');
 
-        if ($invoiceResponse) {
-            try {
-                wp_send_json_success(
-                    [
-                        'status' => 'success',
-                        'message' => __('Order has been placed successfully', 'fluent-cart'),
-                        'data' => $orderItem,
-                        'redirect_to' => $invoiceResponse['url']
-                    ],
-                    200
-                );
-            } catch (\Exception $e) {
-                wp_send_json_error([
-                    'status' => 'failed',
-                    'message' => $e->getMessage()
-                ], 423);
+        if ($stripeSetting['checkout_mode'] === 'modal') {
+            if ($invoiceResponse) {
+                $this->ShowModal($invoiceResponse, $stripeSetting['checkout_mode']);
+            } else {
+                if ($invoiceResponse) {
+                    try {
+                        wp_send_json_success(
+                            [
+                                'status' => 'success',
+                                'message' => __('Order has been placed successfully', 'fluent-cart'),
+                                'data' => $orderItem,
+                                'redirect_to' => $invoiceResponse['url']
+                            ],
+                            200
+                        );
+                    } catch (\Exception $e) {
+                        wp_send_json_error([
+                            'status' => 'failed',
+                            'message' => $e->getMessage()
+                        ], 423);
+                    }
+                }
+            }
+        } else {
+            if ($invoiceResponse) {
+                try {
+                    wp_send_json_success(
+                        [
+                            'status' => 'success',
+                            'message' => __('Order has been placed successfully', 'fluent-cart'),
+                            'data' => $orderItem,
+                            'redirect_to' => $invoiceResponse['url']
+                        ],
+                        200
+                    );
+                } catch (\Exception $e) {
+                    wp_send_json_error([
+                        'status' => 'failed',
+                        'message' => $e->getMessage()
+                    ], 423);
+                }
             }
         }
     }
@@ -100,7 +130,6 @@ class StripePayment extends BasePaymentMethod
                 ),
                 'type' => 'radio'
             ),
-
             'live_secret_key' => array(
                 'value' => '',
                 'label' => __('Live secret key', 'fluent-cart'),
@@ -110,6 +139,15 @@ class StripePayment extends BasePaymentMethod
                 'value' => '',
                 'label' => __('Test secret key', 'fluent-cart'),
                 'type' => 'text'
+            ),
+            'checkout_mode' => array(
+                'value' => '',
+                'label' => __('Checkout Mode', 'fluent-cart'),
+                'options' => array(
+                    'modal' => __('Modal Mode', 'fluent-cart'),
+                    'hosted' => __('Hosted Mode', 'fluent-cart')
+                ),
+                'type' => 'radio'
             ),
             'webhook_desc' => array(
                 'value' => "<h3>Stripe Webhook (For Subscription Payments) </h3> <p>If you use Stripe for recurring payments please set the notification URL in Stripe as bellow:<br/> <p><b>Webhook URL: </b><br/><code> " . site_url('?fct_payment_listener=1&method=stripe_payment') . "</code></p> <br/> you must configure your Stripe webhooks. Visit your <a href='https://stripe.com/docs/webhooks' target='_blank' rel='noopener'>account dashboard</a> to configure them. If you don't setup the IPN notification then it will still work for single payments but recurring payments will not be marked as paid for paypal subscription payments.</div>",
@@ -127,28 +165,48 @@ class StripePayment extends BasePaymentMethod
     public function onPaymentEventTriggered()
     {
         $data = (new StripeApi())->verifyIPN();
-        error_log(print_r("Data starts here", true), 3, __DIR__ . './debug.log');
-
-
-        error_log(print_r($data, true), 3, __DIR__ . './debug.log');
 
         if (!$data) {
             error_log('invalid data');
             return;
         }
-
+        $this->loadCheckoutJs($my_data);
         $checkoutSessionId = $data->data->object->id;
-
         $orderHash = $data->data->object->client_reference_id;
         $apiKey = (new StripeSettings($this->slug))->getApiKey();
         $invoice = (new StripeApi())->getInvoice($checkoutSessionId, $apiKey);
-
-        error_log(print_r($invoice, true), 3, __DIR__ . './debug.log');
 
         if (!$invoice || is_wp_error($invoice)) {
             error_log('invoice not found');
             return;
         }
         return $this->updateOrderStatusByHash($orderHash);
+    }
+
+    public function loadCheckoutJs($my_data)
+    {
+        wp_enqueue_script('fluent-cart-checkout-sdk-' . $this->slug, 'https://js.stripe.com/v3/', [], null, false);
+        Vite::enqueueScript('fluent-cart-checkout-handler-' . $this->slug, 'public/payment-methods/stripe-checkout.js', ['fluent-cart-checkout-sdk-' . $this->slug], false);
+    }
+
+    public function ShowModal($invoiceResponse)
+    {
+        $responseData = [
+            'nextAction'       => 'stripe',
+            'actionName'       => 'custom',
+            'buttonState'      => 'hide',
+            'invoice_response' => $invoiceResponse,
+            'message_to_show'  => __('Payment Modal is opening, Please complete the payment', 'fluent-cart'),
+        ];
+        wp_send_json_success($responseData, 200);
+    }
+
+    public function render($method)
+    {
+        echo '<div>
+                <img class="!w-full !h-full !box-border" src="' . $this->getLogo() . '"alt="' . $this->title . '"/>
+                <div class="paypal-button-wrapper">
+                </div>
+            </div>';
     }
 }
